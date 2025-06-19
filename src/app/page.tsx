@@ -9,10 +9,12 @@ export default function Photoreal3DPage() {
     <div className="font-sans text-gray-900">
       {/* Hero Section */}
       <section className="relative bg-cover bg-center text-white h-full md:h-dvh overflow-hidden">
-        <video autoPlay loop muted playsInline className="w-full h-full">
-          <source src="/video/model.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <iframe
+          className="w-full h-full"
+          id="vagonFrame"
+          allow="microphone  *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *;"
+          src="https://streams.vagon.io/streams/Sofa-Configurator "
+        />
       </section>
 
       {/* AI-Powered Section */}
@@ -33,26 +35,21 @@ export default function Photoreal3DPage() {
         </div>
       </section>
 
-      <section className="bg-[#0B1B35] py-10 md:py-20 px-6">
+      <section className="bg-[#0B1B35] py-10 md:py-20 px-12">
         <div className="max-w-[1297px] mx-auto ">
-          <h2 className="text-center text-2xl sm:text-4xl font-bold text-white max-w-[30ch] mx-auto leading-8 sm:leading-14">A COMPLETE TOOLCHAIN FOR NEXT GENERATION MARKETING</h2>
+          <h2 className="text-center text-2xl sm:text-[42px] font-bold text-white max-w-[30ch] mx-auto leading-8 sm:leading-14">A COMPLETE TOOLCHAIN FOR NEXT GENERATION MARKETING</h2>
 
-          <div className="mt-12 sm:mt-26">
-            {/* <div>
-              <img src="/sofa.png" alt="Metabox" className="mb-4" />
-              <h3 className="text-xl font-bold mb-2">METABOX</h3>
-              <p className="text-gray-200 mb-4">Store and share your native 3D assets from one safe, organized place. Connect to ERPs, manage distribution, and more.</p>
-              <button className="bg-green-500 text-white px-4 py-2 rounded">Learn more</button>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold mb-2">METABOX STUDIO</h3>
-              <p className="text-gray-200 mb-4">
-                Configure, compose, and capture scenes in minutes. No fiddling with sun & lighting and environment effects. The power of full technology studio in your fingertips with instant results.
-              </p>
-              <button className="bg-green-500 text-white px-4 py-2 rounded">Learn more</button>
-            </div> */}
-            <ModelShowcase />
+          <div className="mt-12 sm:mt-26 space-y-18 lg:space-y-32">
+            <ModelShowcase title="MetalBox" description="Store and share your team's 3D assets from one safe organized place. Control access, connect to ERPs, manage distribution, and more." />
+            <ModelShowcase
+              title="MetalBox Studio"
+              description="Configure, compose, and capture scenes in real-life fidelity with virtual lighting and environmental effects. The power of a full photography studio at your fingertips with instant results"
+              order="lg:flex-row-reverse"
+            />
+            <ModelShowcase
+              title="Photoreal 3D Configurators"
+              description="Enable your customers to customize, visualize, price and order the product they want in unparalleled photorealistic quality."
+            />
           </div>
         </div>
       </section>

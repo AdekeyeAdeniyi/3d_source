@@ -1,19 +1,33 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+
 import Button from "./Button";
 
-export default function ModelShowcase() {
+import ChairImage from "../../public/images/chair.jpg";
+
+type ModelShowcaseProps = {
+  title: string;
+  description: string;
+  order?: string;
+};
+
+export default function ModelShowcase({ title, description, order }: ModelShowcaseProps) {
   return (
-    <section className="relative ">
+    <div className={`relative flex gap-14 flex-col lg:flex-row lg:gap-20 w-full basis-auto justify-between lg:items-center ${order}`}>
       <div className="text-white space-y-5">
-        <h2 className=" text-4xl md:text-6xl font-bold uppercase ">MetalBox</h2>
-        <p className="">Store and share your team&apos;s 3D assets from one safe organized place. Control access, connect to ERPs, manage distribution, and more.</p>
+        <h2 className="text-4xl xl:text-6xl font-bold uppercase max-w-[10ch]">{title}</h2>
+        <p className="max-w-[40ch]">{description}</p>
 
         <Button variant="primary" onClick={() => {}}>
           Learn more
         </Button>
       </div>
-    </section>
+
+      <div className=" h-[250px] lg:basis-[500px] xl:basis-[600px] sm:h-[400px] xl:h-[60vh]">
+        <Image src={ChairImage} alt="Metal box chair" className="inline-block w-full h-full object-cover rounded-md" />
+      </div>
+    </div>
   );
 }
