@@ -10,7 +10,7 @@ type FeaturesProp = {
 };
 
 export default function FeatureAccordion() {
-  const [expandedItem, setExpandedItem] = useState();
+  const [expandedItem, setExpandedItem] = useState<string | null>(null);
 
   const features: FeaturesProp[] = [
     {
@@ -35,7 +35,7 @@ export default function FeatureAccordion() {
     },
   ];
 
-  const toggleItem = (itemId: any) => {
+  const toggleItem = (itemId: string) => {
     setExpandedItem(expandedItem === itemId ? null : itemId);
   };
 
