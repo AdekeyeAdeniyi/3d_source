@@ -44,8 +44,8 @@ Unlock the power of Photoreal 3D Marketing Technology with Metabox, Virtual Phot
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/3d-source-app.git
-cd 3d-source-app
+git clone https://github.com/AdekeyeAdeniyi/3d_source.git
+cd 3d_source
 ```
 
 ### 2. Install Dependencies
