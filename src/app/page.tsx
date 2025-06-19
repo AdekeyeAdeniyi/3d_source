@@ -8,9 +8,9 @@ export default function Photoreal3DPage() {
   return (
     <div className="font-sans text-gray-900">
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center text-white h-full md:h-dvh overflow-hidden">
+      <section className="relative bg-cover bg-center text-white h-[500px] md:h-dvh overflow-hidden pt-[56.25%]">
         <iframe
-          className="w-full h-full"
+          className="w-full h-full absolute top-[0%] left-[0%] right-[0%] bottom-[0%]"
           id="vagonFrame"
           allow="microphone  *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *;"
           src="https://streams.vagon.io/streams/Sofa-Configurator "
