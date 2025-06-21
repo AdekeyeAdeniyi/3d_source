@@ -6,6 +6,7 @@ import Image from "next/image";
 import Button from "./Button";
 
 import ChairImage from "../../public/images/chair.jpg";
+import Link from "next/link";
 
 type ModelShowcaseProps = {
   title: string;
@@ -25,9 +26,13 @@ export default function ModelShowcase({ title, description, order }: ModelShowca
         </Button>
       </div>
 
-      <div className=" h-[250px] lg:basis-[500px] xl:basis-[600px] sm:h-[400px] xl:h-[60vh]">
-        <Image src={ChairImage} alt="Metal box chair" className="inline-block w-full h-full object-cover rounded-md" />
-      </div>
+      <Link
+        href="https://share.streampixel.io/67944b8a3f323be4b89a2272"
+        target="__blank"
+        rel="noreferrer"
+        className=" h-[250px] lg:basis-[500px] xl:basis-[600px] sm:h-[400px] xl:h-[60vh] overflow-hidden">
+        <Image src={ChairImage} alt="Metal box chair" className="inline-block w-full h-full object-cover rounded-md hover:scale-105 transition-all" />
+      </Link>
     </div>
   );
 }
